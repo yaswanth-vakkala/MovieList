@@ -22,7 +22,7 @@ const ShowMovieDetails = (props) => {
 
   const onDeleteClick = (id) => {
     axios
-      .delete(import.meta.env.VITE_REACT_API + `/${id}`)
+      .delete(import.meta.env.VITE_REACT_API + `${id}`)
       .then((res) => {
         navigate('/');
       })
