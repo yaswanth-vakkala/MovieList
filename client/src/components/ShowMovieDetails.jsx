@@ -11,7 +11,7 @@ const ShowMovieDetails = (props) => {
 
   useEffect(() => {
     axios
-      .get(import.meta.env.VITE_REACT_API + '/' + `${id}`)
+      .get(import.meta.env.VITE_REACT_API + `/${id}`)
       .then((res) => {
         setMovie(res.data);
       })
@@ -22,7 +22,7 @@ const ShowMovieDetails = (props) => {
 
   const onDeleteClick = (id) => {
     axios
-      .delete(import.meta.env.VITE_REACT_API + `${id}`)
+      .delete(import.meta.env.VITE_REACT_API + `/${id}`)
       .then((res) => {
         navigate('/');
       })
